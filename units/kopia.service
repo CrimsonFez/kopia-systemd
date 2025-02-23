@@ -1,0 +1,6 @@
+[Unit]
+Description=Perform System Backup with Kopia
+
+[Service]
+ExecStart=kopia --config-file="/root/.config/kopia/repository.config" snapshot create --all
+Type=oneshot
